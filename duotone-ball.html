@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <style>
+        *{
+            outline: none;
+        }
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .btn-default {
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+
+        #box{
+            line-height: 24px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <button id="btn" class="btn btn-defaultn">点我</button>
+    <button id="cl"  class="btn btn-defaultn">清空</button>
+    <div id="box">
+
+    </div>
+</div>
+</body>
+<script>
+
+    var btn=document.getElementById('btn');
+    var box=document.getElementById('box');
+    var cl=document.getElementById('cl');
+    var content='';
+
+    cl.onclick = function () {
+        box.innerHTML='';
+        content='';
+    };
+
+    btn.onclick = function () {
+        var redBalls=[];
+        var blueBalls=[];
+        var choseRed=[];
+        var choseBlue;
+        var randomRed=[];
+        var ul = document.createElement('ul');
+        var li = document.createElement('li');
+
+        for(var i=0; i<33; i++){
+            redBalls.push(i+1);
+        }
+        for(var j=0; j<16; j++){
+            blueBalls.push(j+1);
+        }
+        for (var k=0; k<6; k++){
+            var num=getRandom(redBalls.length);
+
+            choseRed.push(redBalls[num]);
+            redBalls.splice(num,1);
+        }
+        //红球
+        choseRed=choseRed.sort(function (a, b) {
+            return a-b;
+        }).join('-');
+
+        //蓝球
+        choseBlue=getRandom(blueBalls.length);
+
+        content+=choseRed+' + '+choseBlue +'<br>';
+
+
+        function getRandom(len){
+            return Math.floor(Math.random()*len);
+        }
+
+        box.innerHTML=content;
+    }
+</script>
+</html>
