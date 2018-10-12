@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>规范 | 尚博信前端开发文档</title>
+    <meta name="description" content=" ">
+    
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.80fe8cb1.css" as="style"><link rel="preload" href="/docs/assets/js/app.98215361.js" as="script"><link rel="preload" href="/docs/assets/js/8.1f07d203.js" as="script"><link rel="prefetch" href="/docs/assets/js/3.2b4c7406.js"><link rel="prefetch" href="/docs/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/docs/assets/js/4.8f0b6856.js"><link rel="prefetch" href="/docs/assets/js/5.ab258151.js"><link rel="prefetch" href="/docs/assets/js/6.f9978c70.js"><link rel="prefetch" href="/docs/assets/js/7.ab82e937.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.80fe8cb1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">尚博信前端开发文档</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/web.html" class="nav-link router-link-exact-active router-link-active">开发规范</a></div><div class="nav-item"><a href="/docs/components.html" class="nav-link">组件</a></div><div class="nav-item"><a href="/docs/project.html" class="nav-link">项目</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/web.html" class="nav-link router-link-exact-active router-link-active">开发规范</a></div><div class="nav-item"><a href="/docs/components.html" class="nav-link">组件</a></div><div class="nav-item"><a href="/docs/project.html" class="nav-link">项目</a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>规范</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/docs/web.html#开发工具" class="sidebar-link">开发工具</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/web.html#开发规范" class="sidebar-link">开发规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/web.html#css" class="sidebar-link">Css</a></li><li class="sidebar-sub-header"><a href="/docs/web.html#stylus" class="sidebar-link">Stylus</a></li><li class="sidebar-sub-header"><a href="/docs/web.html#js" class="sidebar-link">Js</a></li></ul></li><li><a href="/docs/web.html#vue" class="sidebar-link">Vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/web.html#web项目" class="sidebar-link">Web项目</a></li><li class="sidebar-sub-header"><a href="/docs/web.html#weapp项目" class="sidebar-link">WeApp项目</a></li><li class="sidebar-sub-header"><a href="/docs/web.html#组件模板" class="sidebar-link">组件模板</a></li><li class="sidebar-sub-header"><a href="/docs/web.html#vue规范" class="sidebar-link">vue规范</a></li><li class="sidebar-sub-header"><a href="/docs/web.html#项目规范" class="sidebar-link">项目规范</a></li></ul></li><li><a href="/docs/web.html#小幺鸡api接口文档" class="sidebar-link">小幺鸡API接口文档</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/web.html#附录：-工具、插件" class="sidebar-link">附录： 工具、插件</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="规范"><a href="#规范" aria-hidden="true" class="header-anchor">#</a> 规范</h1> <h2 id="开发工具"><a href="#开发工具" aria-hidden="true" class="header-anchor">#</a> 开发工具</h2> <ul><li>WebStorm</li> <li>IDEA</li> <li>小程序开发工具</li></ul> <blockquote><p>vue插件安装 -- File &gt; Settings &gt; Plugins &gt; Browse Repositories &gt; vue.js</p></blockquote> <h2 id="开发规范"><a href="#开发规范" aria-hidden="true" class="header-anchor">#</a> 开发规范</h2> <h3 id="css"><a href="#css" aria-hidden="true" class="header-anchor">#</a> Css</h3> <ul><li><p>缩进 2</p></li> <li><p>在需要显示地设置所有值的情况下，应当尽量限制使用简写形式的属性声明。</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/*Bad*/</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0 0 10px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url(&quot;image.jpg&quot;)</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 3px 3px 0 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*Good*/</span>
+<span class="token selector">.element</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(&quot;image.jpg&quot;)</span><span class="token punctuation">;</span>
+  <span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+  <span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>大部分情况下，我们不需要为简写形式的属性声明指定所有值。例如，HTML 的 heading 元素只需要设置上、下边距（margin）的值，因此，在必要的时候，只需覆盖这两个值就可以。过度使用简写形式的属性声明会导致代码混乱，并且会对属性值带来不必要的覆盖从而引起意外的副作用。</p></blockquote></li> <li><p>去掉小数点前的“0”</p> <div class="language-css extra-class"><pre class="language-css"><code> <span class="token comment">/*Bad*/</span>
+<span class="token selector">.eg</span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 0.8rem
+<span class="token punctuation">}</span>
+ <span class="token comment">/*Good*/</span>
+<span class="token selector">.eg</span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> .8rem
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>尽量使用简写形式的十六进制值(并且值为小写)</p> <div class="language-css extra-class"><pre class="language-css"><code> <span class="token comment">/*Bad*/</span>
+<span class="token selector">.eg</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #FFFFFF<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*Good*/</span>
+<span class="token selector">.eg</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>CSS命名</p> <ul><li>class 名称中只能出现小写字符和破折号（dashe）（不是下划线，也不是驼峰命名法）。破折号应当用于相关 class 的命名（类似于命名空间）（例如，.btn 和 .btn-danger）。</li> <li>避免过度任意的简写。.btn 代表 button，但是 .s 不能表达任何意思。</li> <li>class 名称应当尽可能短，并且意义明确。</li> <li>使用有意义的名称。使用有组织的或目的明确的名称，不要使用表现形式（presentational）的名称。</li> <li>基于最近的父 class 或基本（base） class 作为新 class 的前缀。</li> <li>使用 .js-* class 来标识行为（与样式相对），并且不要将这些 class 包含到 CSS 文件中。</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* Bad example */</span>
+<span class="token selector">.t</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token selector">.red</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token selector">.header</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+
+<span class="token comment">/* Good example */</span>
+<span class="token selector">.tweet</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token selector">.important</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token selector">.tweet-header</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>CSS选择器</p> <ul><li>对于通用元素使用 class ，这样利于渲染性能的优化。</li> <li>对于经常出现的组件，避免使用属性选择器（例如，[class^=&quot;...&quot;]）。浏览器的性能会受到这些因素的影响。</li> <li>选择器要尽可能短，并且尽量限制组成选择器的元素个数，建议不要超过 3 。</li> <li>只有在必要的时候才将 class 限制在最近的父元素内（也就是后代选择器）（例如，不使用带前缀的 class 时 -- 前缀类似于命名空间）。</li> <li><strong>不使用id选择器</strong></li> <li><strong>不直接使用标签</strong></li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/*Bad*/</span>
+<span class="token selector">span</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token selector">.page-container #stream .stream-item .tweet .tweet-header .username</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token selector">.avatar</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token comment">/*Good*/</span>
+<span class="token selector">.avatar</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token selector">.tweet-header .username</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+<span class="token selector">.tweet .avatar</span> <span class="token punctuation">{</span> ... <span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>为选择器分组时，将单独的选择器单独放在一行</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/*Bad*/</span>
+<span class="token selector">.selector, .selector-secondary, .selector[type=text]</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span>15px<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span>0px 0px 15px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span><span class="token function">rgba</span><span class="token punctuation">(</span>0, 0, 0, 0.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span>0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF
+<span class="token punctuation">}</span>
+<span class="token comment">/*Good*/</span>
+<span class="token selector">.selector,
+.selector-secondary,
+.selector[type=&quot;text&quot;]</span> <span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span>0,0,0,.5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 1px 2px #ccc, inset 0 1px 0 #fff<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>css较多时各个模块需要有注释</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* Header */</span>
+  内容区
+<span class="token comment">/* End Header */</span>
+
+</code></pre></div></li></ul> <h3 id="stylus"><a href="#stylus" aria-hidden="true" class="header-anchor">#</a> Stylus</h3> <ul><li>stylus中的嵌套</li></ul> <div class="language-stylus extra-class"><pre class="language-stylus"><code><span class="token comment">// Without nesting</span>
+<span class="token selector">.table &gt; thead &gt; tr &gt; th <span class="token interpolation variable"><span class="token delimiter punctuation">{</span> … <span class="token delimiter punctuation">}</span></span>
+.table &gt; thead &gt; tr &gt; td <span class="token punctuation">{</span></span> … <span class="token punctuation">}</span>
+
+<span class="token comment">// With nesting</span>
+<span class="token selector">.table &gt; thead &gt; tr <span class="token punctuation">{</span></span>
+  <span class="token selector">&gt; th <span class="token interpolation variable"><span class="token delimiter punctuation">{</span> … <span class="token delimiter punctuation">}</span></span>
+  &gt; td <span class="token punctuation">{</span></span> … <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>避免不必要的嵌套。这是因为虽然你可以使用嵌套，但是并不意味着应该使用嵌套。只有在必须将样式限制在父元素内（也就是后代选择器），并且存在多个需要嵌套的元素时才使用嵌套。</p></blockquote> <ul><li>颜色值统一引用自‘variable.styl’</li></ul> <h3 id="js"><a href="#js" aria-hidden="true" class="header-anchor">#</a> Js</h3> <ul><li>函数命名采用驼峰式<div class="language-vue extra-class"><pre class="language-vue"><code>function loadData(){}
+</code></pre></div></li> <li>缩进 2</li> <li>常量全大写，用下划线连接<div class="language-vue extra-class"><pre class="language-vue"><code>const PAGE_NUM = 9
+</code></pre></div></li> <li>构造函数，第一个字母大写</li></ul> <h2 id="vue"><a href="#vue" aria-hidden="true" class="header-anchor">#</a> Vue</h2> <h3 id="web项目"><a href="#web项目" aria-hidden="true" class="header-anchor">#</a> Web项目</h3> <ul><li>目录结构</li></ul> <div class="language-shell extra-class"><pre class="language-text"><code>.
+├── build  项目构建配置
+└── src
+    ├── asset  静态资源文件
+    │   ├── images  图片文件
+    │   └── style  样式文件
+    │       ├── base  基础样式
+    │       ├── icon  字体图标
+    │       ├── mixin  混合样式
+    │       ├── reset  重置样式
+    │       └── variable  样式变量
+    ├── components  公共组件
+    │   ├── base  基础组件（功能组件）
+    │   └── page  页面组件（业务组件）
+    ├── libs  工具方法
+    │   ├── util  工具
+    │   └── http  axios
+    ├── router  路由配置
+    ├── store  状态管理
+    ├── vendors  公共库文件
+    └── views
+        └── home  首页
+            └── components  首页组件
+</code></pre></div><ul><li>UI框架
+<ul><li>web: <a href="https://www.iviewui.com/" target="_blank" rel="noopener noreferrer">iView<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li>app: <a href="https://youzan.github.io/vant/#/zh-CN/intro" target="_blank" rel="noopener noreferrer">Vant<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li> <li>Build Setup</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># install dependencies</span>
+<span class="token function">npm</span> <span class="token function">install</span>
+
+<span class="token comment"># serve with hot reload at localhost:8080</span>
+<span class="token function">npm</span> run dev
+
+<span class="token comment"># build for production with minification</span>
+<span class="token function">npm</span> run build
+
+<span class="token comment"># build for production and view the bundle analyzer report</span>
+<span class="token function">npm</span> run build --report
+</code></pre></div><h3 id="weapp项目"><a href="#weapp项目" aria-hidden="true" class="header-anchor">#</a> WeApp项目</h3> <ul><li>项目目录结构</li></ul> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token keyword">.</span>
+├── build  项目构建配置
+└── src
+    ├── asset  静态资源文件
+    │   ├── js  
+    │   └── style  样式文件
+    │       ├── base  基础样式
+    │       ├── icon  字体图标
+    │       ├── mixin  混合样式
+    │       ├── reset  重置样式
+    │       └── variable  样式变量
+    ├── components  公共组件
+    ├── libs  工具方法
+    │   ├── util  工具
+    │   └── http  wx.request
+    ├── store  状态管理
+    ├── page
+    │   └── home  首页
+    │       ├── index.vue
+    │       └── main.js
+    ├── App.vue  公共组件
+    ├── main.js  入口文件
+    └── app.json  小程序全局配置文件
+</code></pre></div><ul><li>UI框架
+<ul><li><a href="http://mpvue.com/mpvue/" target="_blank" rel="noopener noreferrer">mpVue<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html" target="_blank" rel="noopener noreferrer">小程序开发文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li> <li>eslint</li></ul> <div class="language- extra-class"><pre class="language-text"><code> 'rules': {
+    // allow paren-less arrow functions
+    'arrow-parens': 0,
+    // allow async-await
+    'generator-star-spacing': 0,
+    // allow debugger during development
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'eol-last': 0,
+    'space-before-function-paren': 0,
+    'prefer-promise-reject-errors': 0,
+    'no-unused-vars': 0,
+    'indent': 0,
+    'spaced-comment': 0
+  }
+</code></pre></div><ul><li>Build Setup</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># install dependencies</span>
+<span class="token function">npm</span> <span class="token function">install</span>
+
+<span class="token comment"># serve with hot reload at localhost:8080</span>
+<span class="token function">npm</span> run dev
+
+<span class="token comment"># build for production with minification</span>
+<span class="token function">npm</span> run build
+
+<span class="token comment"># build for production and view the bundle analyzer report</span>
+<span class="token function">npm</span> run build --report
+</code></pre></div><ul><li>编译成功后用小程序开发者工具打开<strong>src目录下</strong>生成的<strong>dist目录</strong></li></ul> <h3 id="组件模板"><a href="#组件模板" aria-hidden="true" class="header-anchor">#</a> 组件模板</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    props<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">created</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    computed<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    watch<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    components<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>stylus<span class="token punctuation">&quot;</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>stylesheet/stylus<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style language-css">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><blockquote><p>注意模板顺序</p></blockquote> <h3 id="vue规范"><a href="#vue规范" aria-hidden="true" class="header-anchor">#</a> vue规范</h3> <ul><li>自用方法名定义时加下划线,并放在其它事件方法的下方</li></ul> <div class="language-vue extra-class"><pre class="language-vue"><code>  methods: {
+    clickHandler() {},
+    _getData() {}
+  }
+</code></pre></div><h3 id="项目规范"><a href="#项目规范" aria-hidden="true" class="header-anchor">#</a> 项目规范</h3> <h5 id="按钮规范"><a href="#按钮规范" aria-hidden="true" class="header-anchor">#</a> 按钮规范</h5> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token comment">&lt;!--icon图标根据语义可以更换， type类型不变--&gt;</span>
+<span class="token comment">&lt;!--查询--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>success<span class="token punctuation">&quot;</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ios-search<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>查询<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Button</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--重置--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>warning<span class="token punctuation">&quot;</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ios-refresh<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>重置<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Button</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--友好操作--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>info<span class="token punctuation">&quot;</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ios-checkmark-circle-outline<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>认可<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Button</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--删除--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>error<span class="token punctuation">&quot;</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ios-trash-outline<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>删除<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Button</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--导出--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>success<span class="token punctuation">&quot;</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ios-download-outline<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>导出<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Button</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--新增--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>success<span class="token punctuation">&quot;</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ios-add-circle-outline<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>新增<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Button</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h5 id="命名规范"><a href="#命名规范" aria-hidden="true" class="header-anchor">#</a> 命名规范</h5> <ol><li>文件、文件夹名称用'-'连接</li> <li>路由名称、路径用'_'连接</li></ol> <h2 id="小幺鸡api接口文档"><a href="#小幺鸡api接口文档" aria-hidden="true" class="header-anchor">#</a> 小幺鸡API接口文档</h2> <div class="language- extra-class"><pre class="language-text"><code>http://47.92.71.36:6060/doc/7ZpwUARs2
+账户自己注册
+</code></pre></div><h2 id="附录：-工具、插件"><a href="#附录：-工具、插件" aria-hidden="true" class="header-anchor">#</a> 附录： 工具、插件</h2> <ul><li><a href="http://iconfont.cn/" target="_blank" rel="noopener noreferrer">阿里巴巴字体图标库<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://icomoon.io/app/#/select" target="_blank" rel="noopener noreferrer">自定义icon字体<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.npmjs.com/package/js-cookie" target="_blank" rel="noopener noreferrer">js-cookie<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://www.npmjs.com/package/qrcode" target="_blank" rel="noopener noreferrer">qrcode<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/docs/assets/js/8.1f07d203.js" defer></script><script src="/docs/assets/js/app.98215361.js" defer></script>
+  </body>
+</html>
